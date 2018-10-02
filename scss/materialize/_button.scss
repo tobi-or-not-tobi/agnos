@@ -1,0 +1,30 @@
+@import './framework';
+@import '../../node_modules/materialize-css/sass/components/buttons';
+
+button,
+a[role='button'],
+input[type='button'] {
+    @extend .waves-effect !optional;
+    &:not(.flat) {
+        @extend .waves-light, .btn !optional;
+    }
+    &.large {
+        @extend .btn-large !optional;
+    }
+    &.small {
+        @extend .btn-small !optional;
+    }
+    &.block {
+        display: block;
+        width: 100%;
+    }
+    &.flat {
+        @extend .btn-link, .waves-teal !optional;
+    }
+    &.close {
+        @extend .close-button !optional;
+    }
+    &.outline:after {
+        content: ' (outline not available)';
+    }
+}

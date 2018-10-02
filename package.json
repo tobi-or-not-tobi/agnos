@@ -11,6 +11,9 @@
     "author": "Tobias Ouwejan",
     "license": "ISC",
     "dependencies": {
+        "bootstrap": "^4.1.3",
+        "bulma": "^0.7.1",
+        "foundation-sites": "^6.5.0-rc.3",
         "materialize-css": "^1.0.0",
         "node-sass": "^4.9.3"
     },
