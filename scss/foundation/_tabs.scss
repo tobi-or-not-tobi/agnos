@@ -1,0 +1,15 @@
+@import '~foundation-sites/scss/foundation';
+
+@include foundation-tabs;
+
+.tabs {
+    ul {
+        @extend .tabs !optional;
+        li {
+            @extend .tabs-title !optional;
+            &.active {
+                @extend .is-active !optional;
+            }
+        }
+    }
+}
