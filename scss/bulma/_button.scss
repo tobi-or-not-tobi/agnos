@@ -1,0 +1,29 @@
+@import './framework';
+@import '~bulma/sass/elements/button.sass';
+
+button,
+a[role='button'],
+input[type='button'] {
+    @extend .button !optional;
+    &:not([disabled]) {
+        @extend .is-primary !optional;
+    }
+    &.large {
+        @extend .is-large !optional;
+    }
+    &.small {
+        @extend .is-small !optional;
+    }
+    &.block {
+        @extend .is-fullwidth !optional;
+    }
+    &.flat {
+        @extend .is-text !optional;
+    }
+    &.outline {
+        @extend .is-outlined !optional;
+    }
+    &.active {
+        @extend .is-active !optional;
+    }
+}
