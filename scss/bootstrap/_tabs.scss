@@ -1,0 +1,15 @@
+@import './framework';
+@import '../node_modules/bootstrap/scss/nav';
+
+.tabs ul {
+    @extend .nav, .nav-tabs !optional;
+    li {
+        @extend .nav-item !optional;
+        a {
+            @extend .nav-link !optional;
+        }
+        &.active a {
+            @extend .active !optional;
+        }
+    }
+}

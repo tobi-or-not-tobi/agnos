@@ -1,0 +1,19 @@
+{
+    "name": "agnos",
+    "version": "0.0.1",
+    "description": "An utility library that applies any popular UI framework to a standard html markup ",
+    "main": "index.js",
+    "scripts": {},
+    "keywords": [
+        "css",
+        "sass"
+    ],
+    "author": "Tobias Ouwejan",
+    "license": "ISC",
+    "dependencies": {
+        "node-sass": "^4.9.3"
+    },
+    "peerDependencies": {
+        "bootstrap": "^4.1.3"
+    }
+}

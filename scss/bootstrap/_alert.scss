@@ -1,0 +1,6 @@
+@import './framework';
+@import '../node_modules/bootstrap/scss/alert';
+
+[role='alert'] {
+    @extend .alert, .alert-primary !optional;
+}
