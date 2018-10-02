@@ -1,0 +1,20 @@
+@import './framework';
+
+h1 {
+    @extend .is-size-1 !optional;
+}
+h2 {
+    @extend .is-size-2 !optional;
+}
+h3 {
+    @extend .is-size-3 !optional;
+}
+h4 {
+    @extend .is-size-4 !optional;
+}
+h5 {
+    @extend .is-size-5 !optional;
+}
+h6 {
+    @extend .is-size-6 !optional;
+}
