@@ -1,0 +1,15 @@
+@import './framework';
+@import '../../node_modules/fundamental-ui/scss/components/tabs.scss';
+
+.tabs {
+    ul {
+        @extend .fd-tabs !optional;
+
+        li {
+            @extend .fd-tabs__item !optional;
+            a {
+                @extend .fd-tabs__link !optional;
+            }
+        }
+    }
+}
