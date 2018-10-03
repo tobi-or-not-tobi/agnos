@@ -1,7 +1,0 @@
-@import '~foundation-sites/scss/foundation';
-
-@include foundation-callout;
-
-[role='alert'] {
-    @extend .callout !optional;
-}

@@ -1,0 +1,21 @@
+$font-stack: 'Open Sans';
+@import '~materialize-css/sass/components/color-variables';
+// @import '../../node_modules/materialize-css/sass/components/color-classes';
+@import '~materialize-css/sass/components/variables';
+@import '~materialize-css/sass/components/global';
+
+@import './materialize/button';
+@import './materialize/tabs';
+@import './materialize/typography';
+
+@mixin _materialize($button: false, $alert: true, $tabs: false, $typography: false) {
+    @if $button == true {
+        @include button;
+    }
+    @if $tabs == true {
+        @include tabs;
+    }
+    @if $alert == true {
+        @warn "Materialize doesn't support the classic alert box, instead they use toasts ";
+    }
+}

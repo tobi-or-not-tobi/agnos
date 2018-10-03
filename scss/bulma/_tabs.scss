@@ -1,6 +1,7 @@
-@import './framework';
 @import '~bulma/sass/components/tabs.sass';
 
-.tabs li.active {
-    @extend .is-active !optional;
+@mixin tabs {
+    .tabs li.active {
+        @extend .is-active !optional;
+    }
 }

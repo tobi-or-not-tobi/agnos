@@ -1,0 +1,23 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+@import './bootstrap/button';
+@import './bootstrap/alert';
+@import './bootstrap/tabs';
+@import './bootstrap/typography';
+
+@mixin _bootstrap($button: false, $alert: false, $tabs: false, $typography: false) {
+    @if $button == true {
+        @include button;
+    }
+    @if $alert == true {
+        @include alert;
+    }
+    @if $tabs == true {
+        @include tabs;
+    }
+    @if $typography == true {
+        @include typography;
+    }
+}

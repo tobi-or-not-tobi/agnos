@@ -1,25 +1,26 @@
-@import './framework';
 @import '../node_modules/bootstrap/scss/buttons';
 
-button,
-input[type='button'] {
-    @extend .btn, .btn-primary !optional;
-    &.large {
-        @extend .btn-lg !optional;
+@mixin button() {
+    button,
+    input[type='button'] {
+        @extend .btn, .btn-primary !optional;
+        &.large {
+            @extend .btn-lg !optional;
+        }
+        &.small {
+            @extend .btn-sm !optional;
+        }
+        &.outline {
+            @extend .btn-outline-primary !optional;
+        }
+        &.block {
+            @extend .btn-block !optional;
+        }
+        &.flat {
+            @extend .btn-flat !optional;
+        }
     }
-    &.small {
-        @extend .btn-sm !optional;
+    a[role='button'] {
+        @extend .btn, .btn-link !optional;
     }
-    &.outline {
-        @extend .btn-outline-primary !optional;
-    }
-    &.block {
-        @extend .btn-block !optional;
-    }
-    &.flat {
-        @extend .btn-flat !optional;
-    }
-}
-a[role='button'] {
-    @extend .btn, .btn-link !optional;
 }

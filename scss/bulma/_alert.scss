@@ -1,9 +1,10 @@
-@import './framework';
 @import '~bulma/sass/elements/notification.sass';
 
-[role='alert'] {
-    @extend .notification !optional;
-    [role='close'] {
-        @extend .delete !optional;
+@mixin alert {
+    [role='alert'] {
+        @extend .notification !optional;
+        [role='close'] {
+            @extend .delete !optional;
+        }
     }
 }

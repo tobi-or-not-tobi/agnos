@@ -1,0 +1,22 @@
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/base/_all.sass';
+
+@import './bulma/button';
+@import './bulma/alert';
+@import './bulma/tabs';
+@import './bulma/typography';
+
+@mixin _bulma($button: false, $alert: false, $tabs: false, $typography: false) {
+    @if $button == true {
+        @include button;
+    }
+    @if $alert == true {
+        @include alert;
+    }
+    @if $tabs == true {
+        @include tabs;
+    }
+    @if $typography == true {
+        @include typography;
+    }
+}

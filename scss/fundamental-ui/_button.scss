@@ -1,38 +1,39 @@
-@import './framework';
-@import '../../node_modules/fundamental-ui/scss/components/button.scss';
+@import '~fundamental-ui/scss/components/button.scss';
 
-button,
-input[type='button'] {
-    @extend .fd-button !optional;
-    &:not(.outline) {
-        @extend .fd-button--action-bar !optional;
+@mixin button {
+    button,
+    input[type='button'] {
+        @extend .fd-button !optional;
+        &:not(.outline) {
+            @extend .fd-button--action-bar !optional;
+        }
+        &.outline {
+            @extend .fd-button !optional;
+        }
+        &.large {
+            @extend .fd-button--l !optional;
+        }
+        &.small {
+            @extend .fd-button--xs !optional;
+        }
+
+        &.block {
+            display: block;
+            width: 100%;
+        }
+        &.active {
+            @extend .is-selected !optional;
+        }
     }
     &.outline {
-        @extend .fd-button !optional;
-    }
-    &.large {
-        @extend .fd-button--l !optional;
-    }
-    &.small {
-        @extend .fd-button--xs !optional;
+        @extend .is-outlined !optional;
     }
 
-    &.block {
-        display: block;
-        width: 100%;
-    }
-    &.active {
-        @extend .is-selected !optional;
-    }
-}
-&.outline {
-    @extend .is-outlined !optional;
-}
-
-a[role='button'] {
-    @extend .fd-link !optional;
-    &:disabled,
-    &[disabled] {
-        @extend .is-disabled !optional;
+    a[role='button'] {
+        @extend .fd-link !optional;
+        &:disabled,
+        &[disabled] {
+            @extend .is-disabled !optional;
+        }
     }
 }

@@ -1,15 +1,16 @@
-@import './framework';
 @import '../../node_modules/bootstrap/scss/type';
 
-h1 {
-    @extend .display-1 !optional;
-}
-h2 {
-    @extend .display-2 !optional;
-}
-h3 {
-    @extend .display-3 !optional;
-}
-h4 {
-    @extend .display-4 !optional;
+@mixin typography {
+    h1 {
+        @extend .display-1 !optional;
+    }
+    h2 {
+        @extend .display-2 !optional;
+    }
+    h3 {
+        @extend .display-3 !optional;
+    }
+    h4 {
+        @extend .display-4 !optional;
+    }
 }

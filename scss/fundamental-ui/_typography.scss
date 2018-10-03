@@ -1,6 +1,5 @@
-@import './framework';
-
-// TOOD
-h1 {
-    @extend .docs-type_SAP--1 !optional;
+@mixin typography {
+    h1 {
+        @extend .docs-type_SAP--1 !optional;
+    }
 }

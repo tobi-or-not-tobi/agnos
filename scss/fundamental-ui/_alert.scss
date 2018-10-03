@@ -1,12 +1,13 @@
-@import './framework';
-@import '../../node_modules/fundamental-ui/scss/components/alert.scss';
+@import '~fundamental-ui/scss/components/alert.scss';
 
-[role='alert'] {
-    @extend .fd-alert !optional;
-    &:has([role='close']) {
-        @extend .fd-alert--dismissible !optional;
-    }
-    [role='close'] {
-        @extend .fd-alert__close !optional;
+@mixin alert {
+    [role='alert'] {
+        @extend .fd-alert !optional;
+        &:has([role='close']) {
+            @extend .fd-alert--dismissible !optional;
+        }
+        [role='close'] {
+            @extend .fd-alert__close !optional;
+        }
     }
 }
