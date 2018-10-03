@@ -15,7 +15,7 @@
             @extend .is-small !optional;
         }
         &.block {
-            @extend .is-fullwidth !optional;
+            @extend .is-block !optional;
         }
         &.flat {
             @extend .is-text !optional;
