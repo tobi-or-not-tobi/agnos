@@ -7,6 +7,9 @@
             @extend .tabs !optional;
             li {
                 @extend .tab, .col, .s3 !optional;
+                &.active a {
+                    @extend .active !optional;
+                }
             }
         }
     }
