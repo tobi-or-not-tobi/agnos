@@ -3,7 +3,9 @@
 @mixin button {
     button,
     input[type='button'] {
+        // &:not([color]) {
         @extend .fd-button !optional;
+        // }
         &:not(.outline) {
             @extend .fd-button--action-bar !optional;
         }
@@ -24,6 +26,10 @@
         &.active {
             @extend .is-selected !optional;
         }
+
+        &[color='secondary'] {
+            @extend .fd-button--secondary !optional;
+        }
     }
     &.outline {
         @extend .is-outlined !optional;
@@ -34,6 +40,31 @@
         &:disabled,
         &[disabled] {
             @extend .is-disabled !optional;
+        }
+    }
+    @include buttongroup();
+}
+
+@mixin buttongroup {
+    [role='group'] {
+        &:has(button),
+        &:has(a[role='button']),
+        &:has(input[type='button']) {
+            @extend .fd-button-group !optional;
+        }
+        // unfortunately we cannot extend from child classes
+        button,
+        a[role='button'],
+        input[type='button'] {
+            &:not(:last-child) {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            }
+            &:not(:first-child) {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                margin-right: -1px;
+            }
         }
     }
 }

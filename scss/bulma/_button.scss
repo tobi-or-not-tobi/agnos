@@ -1,13 +1,12 @@
 @import '~bulma/sass/elements/button.sass';
+@import '~bulma/sass/elements/form.sass';
 
 @mixin button {
     button,
     a[role='button'],
     input[type='button'] {
         @extend .button !optional;
-        &:not([disabled]) {
-            @extend .is-primary !optional;
-        }
+
         &.large {
             @extend .is-large !optional;
         }
@@ -25,6 +24,49 @@
         }
         &.active {
             @extend .is-active !optional;
+        }
+        &:not([disabled]) {
+            &[color='primary'] {
+                @extend .is-primary !optional;
+            }
+            &[color='secondary'] {
+                @extend .is-info !optional;
+            }
+        }
+    }
+    // colors
+    button,
+    input[type='button'] {
+        &:not([color]) {
+            @extend .is-primary !optional;
+        }
+    }
+
+    @include buttongroup();
+}
+
+@mixin buttongroup {
+    [role='group'] {
+        &:has(button),
+        &:has(a[role='button']),
+        &:has(input[type='button']) {
+            @extend .has-addons !optional;
+        }
+
+        // unfortunately we cannot extend from child classes
+        button,
+        a[role='button'],
+        input[type='button'] {
+            &:not(:last-child) {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                margin-right: -1px;
+            }
+            &:not(:first-child) {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                margin-right: -1px;
+            }
         }
     }
 }

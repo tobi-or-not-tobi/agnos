@@ -1,4 +1,4 @@
-@import '~foundation-sites/scss/foundation';
+@import '~foundation-sites/scss/foundation.scss';
 
 @mixin _foundation($button: false, $alert: false, $tabs: false, $typography: false) {
     @if $button == true {
@@ -17,6 +17,7 @@
 
 @mixin _f_button {
     @include foundation-button;
+
     button,
     a[role='button'],
     input[type='button'] {
@@ -29,6 +30,20 @@
         }
         &.close {
             @extend .close-button !optional;
+        }
+        i {
+            font-style: normal;
+        }
+    }
+    @include buttongroup();
+}
+
+@mixin buttongroup {
+    [role='group'] {
+        &:has(button),
+        &:has(a[role='button']),
+        &:has(input[type='button']) {
+            @extend .button-group !optional;
         }
     }
 }

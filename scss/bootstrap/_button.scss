@@ -2,8 +2,10 @@
 
 @mixin button() {
     button,
-    input[type='button'] {
-        @extend .btn, .btn-primary !optional;
+    input[type='button'],
+    a[role='button'] {
+        @extend .btn !optional;
+
         &.large {
             @extend .btn-lg !optional;
         }
@@ -19,8 +21,50 @@
         &.flat {
             @extend .btn-flat !optional;
         }
+        &[color='primary'] {
+            @extend .btn-primary !optional;
+        }
+        &[color='secondary'] {
+            @extend .btn-secondary !optional;
+        }
+    }
+
+    // colors
+    button,
+    input[type='button'] {
+        &:not([color]) {
+            @extend .btn-primary !optional;
+        }
     }
     a[role='button'] {
-        @extend .btn, .btn-link !optional;
+        @extend .btn-link !optional;
+    }
+
+    @include buttongroup();
+}
+
+@mixin buttongroup {
+    [role='group'] {
+        &:has(button),
+        &:has(a[role='button']),
+        &:has(input[type='button']) {
+            @extend .btn-group !optional;
+        }
+
+        // unfortunately we cannot extend from child classes
+        button,
+        a[role='button'],
+        input[type='button'] {
+            &:not(:last-child) {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                // margin-right: -1px;
+            }
+            &:not(:first-child) {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                // margin-right: -1px;
+            }
+        }
     }
 }
