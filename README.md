@@ -1,4 +1,4 @@
-<img src="logo.svg" width="200">
+<img src="https://github.com/tobi-or-not-tobi/agnos/blob/master/agnos.svg" width="200">
 
 There is a large number of UI frameworks that can be used for web app development. Without too much effort, You can add UI elements by just incorporate the the markup language provided by any of those frameworks. The markup is however framework specific, and causes a vendor lock-in.
 
