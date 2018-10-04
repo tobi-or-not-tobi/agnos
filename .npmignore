@@ -1,0 +1,9 @@
+# IDEs and editors
+yarn.lock
+.vscode
+
+# build files
+/dist
+
+# dependencies
+/node_modules

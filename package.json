@@ -1,27 +1,28 @@
 {
     "name": "agnos",
     "version": "0.0.1",
-    "description": "An utility library that applies any popular UI framework to a standard html markup ",
-    "main": "index.js",
-    "scripts": {},
+    "description": "An utility library that intends to applies any popular UI framework to standard html markup ",
     "keywords": [
         "css",
-        "sass"
+        "sass",
+        "UI frameworks",
+        "agnostic"
     ],
     "author": "Tobias Ouwejan",
-    "license": "ISC",
+    "license": "MIT",
+    "repository": "github:tobi-or-not-tobi/agnos",
+    "bugs": {
+        "url": "https://github.com/tobi-or-not-tobi/agnos/issues"
+    },
+    "main": "agnos",
     "dependencies": {
-        "bootstrap": "^4.1.3",
-        "bulma": "^0.7.1",
-        "foundation-sites": "^6.5.0-rc.3",
-        "fundamental-ui": "^1.2.2",
-        "materialize-css": "^1.0.0",
         "node-sass": "^4.9.3"
     },
     "peerDependencies": {
         "bootstrap": "^4.1.3",
         "bulma": "^0.7.1",
         "materialize-css": "^1.0.0",
-        "foundation-sites": "^6.5.0-rc.3"
+        "foundation-sites": "^6.5.0-rc.3",
+        "fundamental-ui": "^1.2.2"
     }
 }
