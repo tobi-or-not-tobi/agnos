@@ -11,17 +11,20 @@
 @import './fundamental-ui/tabs';
 @import './fundamental-ui/typography';
 
-@mixin _fundamental_ui($button: false, $alert: false, $tabs: false, $typography: false) {
-    @if $button == true {
+@mixin agnos($button: false, $alert: false, $tabs: false, $typography: false) {
+    @if $button==true {
         @include button;
     }
-    @if $alert == true {
+
+    @if $alert==true {
         @include alert;
     }
-    @if $tabs == true {
+
+    @if $tabs==true {
         @include tabs;
     }
-    @if $typography == true {
+
+    @if $typography==true {
         @include typography;
     }
 }

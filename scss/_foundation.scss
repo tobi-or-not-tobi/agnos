@@ -1,16 +1,19 @@
 @import 'node_modules/foundation-sites/scss/foundation.scss';
 
-@mixin _foundation($button: false, $alert: false, $tabs: false, $typography: false) {
-    @if $button == true {
+@mixin agnos($button: false, $alert: false, $tabs: false, $typography: false) {
+    @if $button==true {
         @include _f_button;
     }
-    @if $alert == true {
+
+    @if $alert==true {
         @include _f_alert;
     }
-    @if $tabs == true {
+
+    @if $tabs==true {
         @include _f_tabs;
     }
-    @if $typography == true {
+
+    @if $typography==true {
         @include _f_typography;
     }
 }
@@ -22,24 +25,30 @@
     a[role='button'],
     input[type='button'] {
         @extend .button !optional;
+
         &.block {
             @extend .expanded !optional;
         }
+
         &.outline {
             @extend .hollow !optional;
         }
+
         &.close {
             @extend .close-button !optional;
         }
+
         i {
             font-style: normal;
         }
     }
+
     @include buttongroup();
 }
 
 @mixin buttongroup {
     [role='group'] {
+
         &:has(button),
         &:has(a[role='button']),
         &:has(input[type='button']) {
@@ -50,6 +59,7 @@
 
 @mixin _f_alert {
     @include foundation-callout;
+
     [role='alert'] {
         @extend .callout !optional;
     }
@@ -61,8 +71,10 @@
     .tabs {
         ul {
             @extend .tabs !optional;
+
             li {
                 @extend .tabs-title !optional;
+
                 &.active {
                     @extend .is-active !optional;
                 }

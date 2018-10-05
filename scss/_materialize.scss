@@ -8,14 +8,16 @@ $font-stack: 'Open Sans';
 @import './materialize/tabs';
 @import './materialize/typography';
 
-@mixin _materialize($button: false, $alert: true, $tabs: false, $typography: false) {
-    @if $button == true {
+@mixin agnos($button: false, $alert: true, $tabs: false, $typography: false) {
+    @if $button==true {
         @include button;
     }
-    @if $tabs == true {
+
+    @if $tabs==true {
         @include tabs;
     }
-    @if $alert == true {
+
+    @if $alert==true {
         @warn "Materialize doesn't support the classic alert box, instead they use toasts ";
     }
 }
