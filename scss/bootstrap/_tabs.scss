@@ -1,13 +1,17 @@
-@import '../node_modules/bootstrap/scss/nav';
+@import 'node_modules/bootstrap/scss/nav';
 
 @mixin tabs {
     .tabs ul {
-        @extend .nav, .nav-tabs !optional;
+        @extend .nav,
+        .nav-tabs !optional;
+
         li {
             @extend .nav-item !optional;
+
             a {
                 @extend .nav-link !optional;
             }
+
             &.active a {
                 @extend .active !optional;
             }

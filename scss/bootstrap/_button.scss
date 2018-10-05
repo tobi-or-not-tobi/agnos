@@ -1,6 +1,7 @@
-@import '../node_modules/bootstrap/scss/buttons';
+@import 'node_modules/bootstrap/scss/buttons';
 
 @mixin button() {
+
     button,
     input[type='button'],
     a[role='button'] {
@@ -9,21 +10,27 @@
         &.large {
             @extend .btn-lg !optional;
         }
+
         &.small {
             @extend .btn-sm !optional;
         }
+
         &.outline {
             @extend .btn-outline-primary !optional;
         }
+
         &.block {
             @extend .btn-block !optional;
         }
+
         &.flat {
             @extend .btn-flat !optional;
         }
+
         &[color='primary'] {
             @extend .btn-primary !optional;
         }
+
         &[color='secondary'] {
             @extend .btn-secondary !optional;
         }
@@ -36,6 +43,7 @@
             @extend .btn-primary !optional;
         }
     }
+
     a[role='button'] {
         @extend .btn-link !optional;
     }
@@ -45,6 +53,7 @@
 
 @mixin buttongroup {
     [role='group'] {
+
         &:has(button),
         &:has(a[role='button']),
         &:has(input[type='button']) {
@@ -60,6 +69,7 @@
                 border-top-right-radius: 0;
                 // margin-right: -1px;
             }
+
             &:not(:first-child) {
                 border-bottom-left-radius: 0;
                 border-top-left-radius: 0;
