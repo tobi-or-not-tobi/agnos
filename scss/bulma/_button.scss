@@ -2,6 +2,7 @@
 @import 'node_modules/bulma/sass/elements/form.sass';
 
 @mixin button {
+
     button,
     a[role='button'],
     input[type='button'] {
@@ -10,30 +11,38 @@
         &.large {
             @extend .is-large !optional;
         }
+
         &.small {
             @extend .is-small !optional;
         }
+
         &.block {
-            @extend .is-block !optional;
+            @extend .is-fullwidth !optional;
         }
+
         &.flat {
             @extend .is-text !optional;
         }
+
         &.outline {
             @extend .is-outlined !optional;
         }
+
         &.active {
             @extend .is-active !optional;
         }
+
         &:not([disabled]) {
             &[color='primary'] {
                 @extend .is-primary !optional;
             }
+
             &[color='secondary'] {
                 @extend .is-info !optional;
             }
         }
     }
+
     // colors
     button,
     input[type='button'] {
@@ -47,6 +56,7 @@
 
 @mixin buttongroup {
     [role='group'] {
+
         &:has(button),
         &:has(a[role='button']),
         &:has(input[type='button']) {
@@ -62,6 +72,7 @@
                 border-top-right-radius: 0;
                 margin-right: -1px;
             }
+
             &:not(:first-child) {
                 border-bottom-left-radius: 0;
                 border-top-left-radius: 0;
