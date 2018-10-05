@@ -1,10 +1,10 @@
-//   $fd-scss-icons-path: '~fundamental-ui/scss/icons/';
-//   $fd-fonts-path: '~fundamental-ui/scss/fonts/';
+//   $fd-scss-icons-path: 'node_modules/fundamental-ui/scss/icons/';
+//   $fd-fonts-path: 'node_modules/fundamental-ui/scss/fonts/';
 //   $fd-colors-action: (
 //     1: $primary
 //   );
 
-@import '~fundamental-ui/scss/settings';
+@import 'node_modules/fundamental-ui/scss/settings';
 
 @import './fundamental-ui/button';
 @import './fundamental-ui/alert';

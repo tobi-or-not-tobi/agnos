@@ -1,4 +1,4 @@
-@import '~foundation-sites/scss/foundation.scss';
+@import 'node_modules/foundation-sites/scss/foundation.scss';
 
 @mixin _foundation($button: false, $alert: false, $tabs: false, $typography: false) {
     @if $button == true {
