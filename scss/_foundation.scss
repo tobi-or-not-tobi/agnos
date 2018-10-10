@@ -1,19 +1,19 @@
 @import 'node_modules/foundation-sites/scss/foundation.scss';
 
-@mixin agnos($button: false, $alert: false, $tabs: false, $typography: false) {
-    @if $button==true {
+@mixin agnos($all: false, $button: false, $alert: false, $tabs: false, $typography: false) {
+    @if $all or $button {
         @include _f_button;
     }
 
-    @if $alert==true {
+    @if $all or $alert {
         @include _f_alert;
     }
 
-    @if $tabs==true {
+    @if $all or $tabs {
         @include _f_tabs;
     }
 
-    @if $typography==true {
+    @if $all or $typography {
         @include _f_typography;
     }
 }
@@ -48,7 +48,6 @@
 
 @mixin buttongroup {
     [role='group'] {
-
         &:has(button),
         &:has(a[role='button']),
         &:has(input[type='button']) {

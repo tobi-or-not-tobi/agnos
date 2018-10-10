@@ -6,20 +6,20 @@
 @import './bulma/tabs';
 @import './bulma/typography';
 
-@mixin agnos($button: false, $alert: false, $tabs: false, $typography: false) {
-    @if $button==true {
+@mixin agnos($all: false, $button: false, $alert: false, $tabs: false, $typography: false) {
+    @if $all or $button {
         @include button;
     }
 
-    @if $alert==true {
+    @if $all or $alert {
         @include alert;
     }
 
-    @if $tabs==true {
+    @if $all or $tabs {
         @include tabs;
     }
 
-    @if $typography==true {
+    @if $all or $typography {
         @include typography;
     }
 }

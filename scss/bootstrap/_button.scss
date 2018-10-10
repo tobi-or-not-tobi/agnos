@@ -1,7 +1,6 @@
 @import 'node_modules/bootstrap/scss/buttons';
 
 @mixin button() {
-
     button,
     input[type='button'],
     a[role='button'] {
@@ -37,12 +36,12 @@
     }
 
     // colors
-    button,
-    input[type='button'] {
-        &:not([color]) {
-            @extend .btn-primary !optional;
-        }
-    }
+    // button,
+    // input[type='button'] {
+    //     &:not([color]) {
+    //         @extend .btn-primary !optional;
+    //     }
+    // }
 
     a[role='button'] {
         @extend .btn-link !optional;
@@ -53,7 +52,6 @@
 
 @mixin buttongroup {
     [role='group'] {
-
         &:has(button),
         &:has(a[role='button']),
         &:has(input[type='button']) {

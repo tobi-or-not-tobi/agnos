@@ -2,7 +2,6 @@
 @import 'node_modules/bulma/sass/elements/form.sass';
 
 @mixin button {
-
     button,
     a[role='button'],
     input[type='button'] {
@@ -56,7 +55,6 @@
 
 @mixin buttongroup {
     [role='group'] {
-
         &:has(button),
         &:has(a[role='button']),
         &:has(input[type='button']) {
